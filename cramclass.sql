@@ -1,4 +1,4 @@
-SET NAME UTF8;
+SET NAMES UTF8;
 DROP DATABASE IF EXISTS cramc;
 CREATE DATABASE cramc CHARSET=UTF8;
 USE cramc;
@@ -28,19 +28,19 @@ CREATE TABLE cramc_carousel_item(
   pic VARCHAR(128),
   url VARCHAR(128),
   title VARCHAR(32)
-)
+);
 #插入
 INSERT INTO cramc_carousel_item VALUES("NULL","img","/m1.html","文字1"),
 ("NULL","img","/m2.html","文字2"),
 ("NULL","img","/m3.html","文字3"),
-("NULL","img","/m4.html","文字4")
+("NULL","img","/m4.html","文字4");
 #创建用户注册表
 CREATE TABLE cramc_user_reg(
   uid INT PRIMARY KEY AUTO_INCREMENT,
   uname VARCHAR(16),
   uwpd VARCHAR(20),
   email VARCHAR(20),
-  phone BIGINT,
+  phone VARCHAR(11),
   first_name VARCHAR(3),
   sex BOOL
 );
@@ -61,4 +61,64 @@ INSERT INTO cramc_grade VALUES("10","初一","数学，英语，物理，化学�
 ("40","高一","数学，英语，物理，化学，地理"),
 ("50","高二","数学，英语，物理，化学，地理");
 #简历课程表
-CREATE TABLE cramc_course();
+CREATE TABLE cramc_course(
+  cid INT PRIMARY KEY AUTO_INCREMENT,
+  course_name VARCHAR(20),
+  course_grade VARCHAR(20),
+  course_time VARCHAR(40),
+  course_long VARCHAR(10),
+  course_teacher VARCHAR(5),
+  course_information VARCHAR(128),
+  course_price DECIMAL(7,2),
+  course_test BOOL
+);
+#插入数据
+INSERT INTO cramc_course VALUES("NULL","数学","适合初一至高二","周末全天，周一至周五晚7点开始","120","林淼等","雄厚的师资力量，多年教学经验，狠抓重点要点","4999","1"),
+("NULL","英语","适合初一至高二","周末全天，周一至周五晚8点开始","144","王胜等","雄厚的师资力量，多年教学经验，狠抓重点要点，有定期外教交流","5999","1"),
+("NULL","物理","适合初二至高二","周末全天，周一至周五晚7点开始","96","普兰特等","雄厚的师资力量，多年教学经验，狠抓重点要点，紧密贴合考试要点","4599","1"),
+("NULL","化学","适合初三至高二","周末全天，周一至周五晚7点开始","120","林凯等","雄厚的师资力量，多年教学经验，狠抓重点要点，多年带毕业生经验","4799","1"),
+("NULL","地理","适合初一至高二","周末全天，周一至周五晚7点开始","144","贾嘉等","雄厚的师资力量，多年教学经验，狠抓重点要点，多年研究中高考等，紧跟命题步伐","4999","1");
+#创建精品课程表
+CREATE TABLE cramc_course_great(
+  gid INT PRIMARY KEY AUTO_INCREMENT,
+  gname VARCHAR(10),
+  ginformation VARCHAR(256)
+);
+#插入数据
+INSERT INTO cramc_course_great VALUES("NULL","高一数学",""),
+("NULL","初三数学",""),
+("NULL","高一英语",""),
+("NULL","高二化学",""),
+("NULL","初一物理",""),
+("NULL","初一化学",""),
+("NULL","高二化学","");
+#创建报名表
+CREATE TABLE user_join(
+  jid INT PRIMARY KEY AUTO_INCREMENT,
+  class_name VARCHAR(10),
+  contact VARCHAR(5),
+  phone VARCHAR(11),
+  grade VARCHAR(10)
+);
+#插入数据
+INSERT INTO user_join VALUES("NULL","数学","赵先生","18593665599","高一");
+#创建名师介绍SI
+CREATE TABLE cramc_teacher(
+  tid INT PRIMARY KEY AUTO_INCREMENT,
+  tname VARCHAR(6),
+  tclass VARCHAR(20),
+  synopsis VARCHAR(256),
+  tidea VARCHAR(125),
+  tsaying VARCHAR(125)
+);
+#插入数据
+INSERT INTO cramc_teacher VALUES("NULL","林淼","数学","毕业于山西师范大学，任教5年，学生成绩出众","寓教于乐，快乐学习","想学生所想，思学生所思");
+#创建优秀学员表
+CREATE TABLE cramc_stu(
+  sid INT PRIMARY KEY AUTO_INCREMENT,
+  sname VARCHAR(5),
+  grade VARCHAR(125),
+  ssaying VARCHAR(100)
+);
+#插入数据
+INSERT INTO cramc_stu VALUES("NULL","张三","以优异成绩被西南交通大学录取","快乐学习，快乐自己");
