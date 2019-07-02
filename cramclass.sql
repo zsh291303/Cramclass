@@ -44,4 +44,21 @@ CREATE TABLE cramc_user_reg(
   first_name VARCHAR(3),
   sex BOOL
 );
-INSERT INTO 
+INSERT INTO cramc_user_reg VALUES("NULL","king","123456","king@126.com","18615664589","张","1"),
+("NULL","tom","597462","tom@126.com","18718526789","赵","0"),
+("NULL","jerry","z45s80","jerry@126.com","15615489665","李","0"),
+("NULL","ben","88s96f","ben@126.com","19865412598","钱","1");
+#创建年级表
+CREATE TABLE cramc_grade(
+  gid INT PRIMARY KEY,
+  grade VARCHAR(10),
+  classname VARCHAR(200)
+);
+#插入数据
+INSERT INTO cramc_grade VALUES("10","初一","数学，英语，物理，化学，地理"),
+("20","初二","数学，英语，物理，化学，地理"),
+("30","初三","数学，英语，物理，化学，地理"),
+("40","高一","数学，英语，物理，化学，地理"),
+("50","高二","数学，英语，物理，化学，地理");
+#简历课程表
+CREATE TABLE cramc_course();
