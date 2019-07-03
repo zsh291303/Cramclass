@@ -1,8 +1,11 @@
 <h1>注册</h1>
-<form method="" action="">
-  用户:<input type="text" name="uname"><br>
-  密码:<input type="text" name="upwd"><br>
-  电话:<input type="text" name="phone"><br>
+<form method="post" action="/user/reg">
+  用户名:<input type="text" name="uname"><br>
+  密码:<input type="password" name="upwd"><br>
   邮箱:<input type="text" name="email"><br>
+  电话:<input type="text" name="phone"><br>
+  姓氏:<input type="text" name="first_name"><br>
+  性别:<input type="radio" name="sex" value="1">男
+	     <input type="radio" name="sex" value="0">女<br>
   <input type="submit">
 </form>
