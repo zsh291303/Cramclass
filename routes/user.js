@@ -1,6 +1,7 @@
 const express=require('express');
 const pool=require('../pool');
 var router=express.Router();
+//用户注册
 router.post('/reg',function(req,res){
   var obj=req.body;
   var i=400
@@ -54,6 +55,7 @@ router.post('/reg',function(req,res){
 		};
   });
 });
+//用户登录
 router.post('/login',function(req,res){
   var obj=req.body;
   if(!obj.uname){
@@ -85,6 +87,7 @@ router.post('/login',function(req,res){
 	};
   });
 });
+//用户检索
 router.post('/detail',function(req,res){
   var obj=req.query;
   if(!obj.uid){
@@ -107,19 +110,20 @@ router.post('/detail',function(req,res){
 		};
   });
 });
+//修改用户信息
 router.post('/update',function(req,res){
   var obj=req.body;
   var i=400;
 
   for(var key in obj){
     i++;
-	if(!obj[key]){
-	  res.send({
-	    code:i,
-		msg:[key]+' required'
-	  });
-	return;
-	};	
+		if(!obj[key]){
+		 res.send({
+			 code:i,
+			 msg:[key]+' required'
+			});
+			return;
+		};	
   };
   var uid=obj.uid;
   delete obj.uid;
@@ -138,6 +142,7 @@ router.post('/update',function(req,res){
 	};
   });
 });
+//用户列表
 router.get('/list',function(req,res){
   var obj=req.query;
 	if(!obj.pno){
