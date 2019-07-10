@@ -67,9 +67,9 @@ router.delete("/v1/delete/:uid",(req,res)=>{
 	})
 });
 //查询用户名
-router.get("/v2/queryuser/:uname",(req,res)=>{
+router.get("/v1/queryuser/:uname",(req,res)=>{
 	var $uid=req.params.uname
-	var sql="select * from xz_user where uname=?"
+	var sql="select * from cramc_user_reg where uname=?"
 	pool.query(sql,[$uid],(err,result)=>{
 		if(err)  throw  err;
 		if(result.length>0){
@@ -78,5 +78,14 @@ router.get("/v2/queryuser/:uname",(req,res)=>{
 			res.send("0")	
 		}
 	})
-})：
+});
+//用户报名
+router.post("v1/user_join",(req,res)=>{
+	var obj=req.body
+	var sql="insert into user_join set ?"
+	pool.query(sql,[obj],(err,result)=>{
+		if(err)  throw  err;
+		res.send("1")
+	})
+})
 module.exports=router;

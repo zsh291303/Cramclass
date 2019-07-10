@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<script>
+			function det(){
+				var urlParams=new URLSearchParams(location.search)
+				var $uid=urlParams.get("uid")
+				alert($uid)
+				uid.value=$uid
+				if(!uid.value){
+					alert("编号为空")
+				}
+				var xhr=new XMLHttpRequest();
+				console.log(xhr)
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						var arr=JSON.parse(result)[0]
+						uname.value=arr.uname
+						upwd.value=arr.upwd
+						email.value=arr.email
+						phone.value=arr.phone
+						first_name.value=arr.first_name
+						if(arr.sex==1){
+							n.checked=true
+						}else if(arr.sex==0){
+							w.checked=true
+						}else{
+							un.checked=true
+						}
+					}
+				}
+				xhr.open("get","/user/v1/detail/"+$uid,true)
+				xhr.send(null)
+			}
+		</script>
+	</head>
+	<body onload="det()">
+		<input type="text" id="uid" readonly><br>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<input type="text" id="email"><br>
+		<input type="text" id="phone"><br>
+		<input type="text" id="first_name"><br>
+		<input type="radio" id="n" name="sex"><label for="n">男</label>
+		<input type="radio" id="w" name="sex"><label for="w">女</label>
+		<input type="radio" id="un" name="sex"><label for="un">保密</label>
+	</body>
+</html>

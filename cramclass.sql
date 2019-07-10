@@ -38,7 +38,7 @@ INSERT INTO cramc_carousel_item VALUES("NULL","img","/m1.html","文字1"),
 CREATE TABLE cramc_user_reg(
   uid INT PRIMARY KEY AUTO_INCREMENT,
   uname VARCHAR(16),
-  uwpd VARCHAR(20),
+  upwd VARCHAR(20),
   email VARCHAR(20),
   phone VARCHAR(11),
   first_name VARCHAR(3),

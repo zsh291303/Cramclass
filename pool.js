@@ -4,7 +4,7 @@ var pool=mysql.createPool({
    port:'3306',
    user:'root',
    password:'',
-   database:'Clamclass',
+   database:'cramc',
    connectionLimit:20 
 });
 module.exports=pool;

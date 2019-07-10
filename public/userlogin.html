@@ -1,10 +1,53 @@
 <!doctype html>
 <html>
- <head>
-  <title></title>
-  <meta charset="UTF-8">
- </head>
- <body>
-  
- </body>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<script>
+			function b1(){
+				if(!uname.value){
+					s1.innerHTML="用户名不能为空"
+				}
+			}
+			function f1(){
+					s1.innerHTML="用户名为6~12位"
+			}
+			function b2(){
+				if(!upwd.value){
+					s2.innerHTML="密码不能为空"
+				}
+			}
+			function f2(){
+				s2.innerHTML="密码为6~12位"
+			}
+		</script>
+		<script>
+			function login(){
+				var $uname=uname.value;
+				var $upwd=upwd.value;
+				var xhr=new XMLHttpRequest();
+				console.log(xhr)
+				xhr.onreadystatechange=function(){
+					console.log(xhr.readyState)
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText
+						if(result=="1"){
+							alert("登录成功")
+						}else if(result=="0"){
+							alert("用户名或密码不正确")
+						}else{
+							alert("未响应")
+						}
+					}
+				}
+				xhr.open("get","/user/v1/login/"+$uname+"&"+$upwd,true)
+				xhr.send(null); 
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname" onblur="b1()" onfocus="f1()" placeholder="请输入您的用户名"><span id="s1"></span><br>
+		<input type="password" id="upwd" onblur="b2()" onfocus="f2()" placeholder="请输入您的密码"><span id="s2"></span><br>
+		<button onclick="login()">登录</button>
+	</body>
 </html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<script>
+			function list(){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						var arr=JSON.parse(result)
+						var html=""
+						html=`
+							<table border=1px>
+								<tr>
+									<th>用户名</th>
+									<th>用户密码</th>
+									<th>邮箱</th>
+									<th>联系方式</th>
+									<th>姓氏</th>
+									<th>性别</th>
+									<th>操作</th>
+							  </tr>
+						`
+						for (var i=0;i<arr.length;i++){
+							html+=`
+								<tr>
+									<td>${arr[i].uname}</td>
+									<td>${arr[i].upwd}</td>
+									<td>${arr[i].email}</td>
+									<td>${arr[i].phone}</td>
+									<td>${arr[i].first_name}</td>
+								`
+								if(arr[i].sex==1){
+									arr[i].sex="男"
+								}else if(arr[i].sex==0){
+									arr[i].sex="女"
+								}else{
+									arr[i].sex="保密"
+								}
+							html+=`
+									<td>${arr[i].sex}</td>
+									<td>
+										<a href="userdetail.html?uid=${arr[i].uid}" target="blank">修改</a>
+										<a href="">删除</a>
+									</td>
+								</tr>
+							`
+						}
+						html+=`
+							</table>
+						`
+						d1.innerHTML=html
+					}
+				}
+				xhr.open("get","/user/v1/list",true)
+				xhr.send(null)
+			}
+		</script>
+	</head>
+	<body onload="list()">
+		<div id="d1"></div>
+	</body>
+</html>
