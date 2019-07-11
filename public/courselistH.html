@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+	<script>
+		function list(){
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText
+					var arr=JSON.parse(result)
+					var html=`
+						<table border="1px">
+							<tr>
+								<th>课程名称</th>
+								<th>课程年级</th>
+								<th>课程时间安排</th>
+								<th>课时</th>
+								<th>任课教师</th>
+								<th>课程简介</th>
+								<th>课程价格</th>
+								<th>是否有结业测试</th>
+								<th>操作</th>
+							</tr>
+					`
+					for(var i=0;i<arr.length;i++){
+						html+=`
+							<tr>
+								<td>${arr[i].course_name}</td>
+								<td>${arr[i].course_grade}</td>
+								<td>${arr[i].course_time}</td>
+								<td>${arr[i].course_long}</td>
+								<td>${arr[i].course_teacher}</td>
+								<td>${arr[i].course_information}</td>
+								<td>${arr[i].course_price}</td>
+						`
+						if(arr[i].course_test==1){
+							arr[i].course_test="是"
+						}else{
+							arr[i].course_test="无"
+						}
+						html+=`
+								<td>${arr[i].course_test}</td>
+								<td>
+									<a href="">修改</a>
+									<a href="">删除</a>
+								</td>
+							</tr>
+						`
+					}
+					html+=`</table>`
+					d1.innerHTML=html
+				}
+			}
+			xhr.open("get","/course/v1/list",true);
+			xhr.send(null);
+		}
+	</script>
+</head>
+	<body onload="list()">
+		<div id="d1"></div>
+	</body>
+</html>

@@ -60,7 +60,7 @@ router.get('/v1/list',function(req,res){
 //删除
 router.delete("/v1/delete/:uid",(req,res)=>{
 	var $uid=req.params.uid;
-	var sql="delete from xz_user where uid=?"
+	var sql="delete from cramc_user_reg where uid=?"
 	pool.query(sql,[$uid],(err,result)=>{
 		if(err)  throw  err
 		res.send('1')

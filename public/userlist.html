@@ -43,7 +43,7 @@
 									<td>${arr[i].sex}</td>
 									<td>
 										<a href="userdetail.html?uid=${arr[i].uid}" target="blank">修改</a>
-										<a href="">删除</a>
+										<a href="javascript:del(${arr[i].uid})">删除</a>
 									</td>
 								</tr>
 							`
@@ -56,6 +56,23 @@
 				}
 				xhr.open("get","/user/v1/list",true)
 				xhr.send(null)
+			}
+		</script>
+		<script>
+			function del($uid){
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							list()
+						}else{
+							alert("删除失败")
+						}
+					}
+				}
+				xhr.open("delete","/user/v1/delete/"+$uid,true)
+				xhr.send(null);
 			}
 		</script>
 	</head>

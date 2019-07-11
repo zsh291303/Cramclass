@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script>
+			function join(){
+				var $class_name=class_name.value;
+				var $contact=contact.value;
+				var $phone=phone.value;
+				var $grade=grade.value;
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText
+					}
+				}
+				xhr.open("post","/user/v1/user_join",true)
+				var formdata=
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send(formdata)
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="class_name"><br>
+		<input type="text" id="contact"><br>
+		<input type="text" id="phone"><br>
+		<select id="grade">
+			<option id="op1">初一</option>
+			<option id="op2">初二</option>
+			<option id="op3">初三</option>
+			<option id="op4">高一</option>
+			<option id="op5">高二</option>
+		</select><br>
+		<button onclick="join()"></button>
+	</body>
+</html>

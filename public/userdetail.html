@@ -36,6 +36,41 @@
 				xhr.send(null)
 			}
 		</script>
+		<script>
+			function upd(){
+				$uid=uid.value;
+				$uname=uname.value;
+				$upwd=upwd.value;
+				$email=email.value;
+				$phone=phone.value;
+				$first_name=first_name.value;
+				var $sex=null;
+				if(n.checked){
+					$sex="1"
+				}else if(w.checked){
+					$sex="0"
+				}else if(un.checked){
+					$sex="2"
+				}
+				var xhr=new XMLHttpRequest();
+				console.log(xhr)
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result==1){
+							alert("修改成功")
+							location.href="http://127.0.0.1:8080/userlist.html"
+						}else{
+							alert("修改失败")
+						}
+					}
+				}
+				xhr.open("put","/user/v1/update",true)
+				var formdata="uname="+$uname+"&upwd="+$upwd+"&email="+$email+"&phone="+$phone+"&first_name="+$first_name+"&sex="+$sex+"&uid="+$uid;
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send(formdata)
+			}
+		</script>
 	</head>
 	<body onload="det()">
 		<input type="text" id="uid" readonly><br>
@@ -46,6 +81,7 @@
 		<input type="text" id="first_name"><br>
 		<input type="radio" id="n" name="sex"><label for="n">男</label>
 		<input type="radio" id="w" name="sex"><label for="w">女</label>
-		<input type="radio" id="un" name="sex"><label for="un">保密</label>
+		<input type="radio" id="un" name="sex" checked><label for="un">保密</label><br>
+		<button onclick="upd()">确认修改</button>
 	</body>
 </html>
