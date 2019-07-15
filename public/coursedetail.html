@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<script>
+			function detail(){
+				var urlParams=new URLSearchParams(location.search)
+				var $cid=urlParams.get("cid")
+				alert($cid)
+				cid.value=$cid
+				if(!cid.value){
+					alert("编号为空")
+				}
+				var xhr=new XMLHttpRequest()
+				console.log(xhr)
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+					var result=xhr.responseText;
+					var arr=JSON.parse(result)[0]
+					course_name.value=arr.course_name
+					course_grade.value=arr.course_grade
+					course_time.value=arr.course_time
+					course_long.value=arr.course_long
+					course_teacher.value=arr.course_teacher
+					course_information.value=arr.course_information
+					course_price.value=arr.course_price
+					course_test.value=arr.course_test
+					cramc_gid.value=arr.cramc_gid
+					}
+				}
+				xhr.open("get","/course/v1/detail/"+$cid,true)
+				xhr.send(null);
+			}
+		</script>
+	</head>
+	<body onload="detail()">
+		<input type="text" id="cid" readonly><br>
+		<input type="text" id="course_name"><br>
+		<input type="text" id="course_grade"><br>
+		<input type="text" id="course_time"><br>
+		<input type="text" id="course_long"><br>
+		<input type="text" id="course_teacher"><br>
+		<input type="text" id="course_information"><br>
+		<input type="text" id="course_price"><br>
+		<input type="text" id="course_test"><br>
+		<input type="text" id="cramc_gid"><br>
+	</body>
+</html>
