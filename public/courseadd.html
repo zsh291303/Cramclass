@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script>
+			function b1(){
+				if(!course_name.value){
+					sp1.innerHTML="课程名称不能为空"
+				}
+			}
+			function b2(){
+				if(!course_grade.value){
+					sp2.innerHTML="课程年级不能为空"
+				}
+			}
+			function b3(){
+				if(!course_time.value){
+					sp3.innerHTML="课程时间不能为空"
+				}
+			}
+			function b4(){
+				if(!course_long.value){
+					sp4.innerHTML="课成时长不能为空"
+				}
+			}
+			function b5(){
+				if(!course_teacher.value){
+					sp5.innerHTML="任课老师不能为空"
+				}
+			}
+			function b6(){
+				if(!course_information.value){
+					sp6.innerHTML="课程简介不能为空"
+				}
+			}
+			function b7(){
+				if(!course_price.value){
+					sp7.innerHTML="课程价格不能为空"
+				}
+			}
+			function b8(){
+				if(!cramc_gid.value){
+					sp8.innerHTML="年级编号不能为空"
+				}
+			}
+			function add(){
+				var $course_name=course_name.value
+				var $course_grade=course_grade.value
+				var $course_time=course_time.value
+				var $course_long=course_long.value
+				var $course_teacher=course_teacher.value
+				var $course_information=course_information.value
+				var $course_price=course_price.value
+				var $course_text=null
+				  if(y.checked){
+						$course_text="1"
+					}else{
+						$course_text="0"
+					}
+				var $cramc_gid=cramc_gid.value
+				if(!$course_name || !$course_grade || !$course_time || !$course_long || !$course_teacher || !$course_information || !$course_price || !$cramc_gid){
+					alert("添加失败")
+					return;
+				}
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+					}
+				}
+				xhr.open("post","/course/v1/add",true)
+				var formdata="couser_name="+$couser_name+"&couser_grade="+$couser_grade+"&couser_time="+$couser_time+"&couser_long="+$couser_long+"&couser_information="+$couser_information+"&couser_price="+$couser_price+"&couser_text="+$couser_text+"&cramc_gid="+$cramc_gid
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				xhr.send(formdata)
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="course_name" onblur="b1()" placeholder="请输入课程名称"><span id="sp1"></span><br>
+		<input type="text" id="course_grade" onblur="b2()" placeholder="请输入课程年级"><span id="sp2"></span><br>
+		<input type="text" id="course_time" onblur="b3()" placeholder="请输入课程时间"><span id="sp3"></span><br>
+		<input type="text" id="course_long" onblur="b4()" placeholder="请输入课成时长"><span id="sp4"></span><br>
+		<input type="text" id="course_teacher" onblur="b5()" placeholder="请输入任课老师"><span id="sp5"></span><br>
+		<input type="text" id="course_information" onblur="b6()" placeholder="请输入课程简介"><span id="sp6"></span><br>
+		<input type="text" id="course_price" onblur="b7()" placeholder="请输入课程价格"><span id="sp7"></span><br>
+		<input type="radio" id="y" name="text" checked><label for="y">是</label>
+		<input type="radio" id="n" name="text"><label for="n">否</label><br>
+		<input type="text" id="cramc_gid" onblur="b8()" placeholder="请输入年级编号"><span id="sp8"></span><br> 
+		<button onclick="add()">添加</button>
+	</body> 
+</html>

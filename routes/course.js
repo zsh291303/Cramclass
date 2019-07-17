@@ -33,7 +33,7 @@ router.delete('/v1/delete/:cid',function(req,res){
 	});
 });
 //添加课程
-router.post('/add',function(req,res){
+router.post('/v1/add',function(req,res){
 	var obj=req.body;
 	var sql="insert into cramc_course set ?"
 	pool.query(sql,[obj],(err,result)=>{

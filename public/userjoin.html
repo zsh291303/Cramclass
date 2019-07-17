@@ -4,35 +4,57 @@
 		<title></title>
 		<meta charset="utf-8">
 		<script>
+			function b1(){
+				if(!class_name.value){
+					sp1.innerHTML="课程名称不能为空"
+				}
+			}
+			function b2(){
+				if(!contact.value){
+					sp2.innerHTML="联系人不能为空"
+				}
+			}
+			function b3(){
+				if(!phone.value){
+					sp3.innerHTML="联系方式不能为空"
+				}
+			}
 			function join(){
 				var $class_name=class_name.value;
 				var $contact=contact.value;
 				var $phone=phone.value;
 				var $grade=grade.value;
+				if(!$class_name || !$contact || !phone){
+					alert("报名失败")
+					return;
+				}
 				var xhr=new XMLHttpRequest();
 				xhr.onreadystatechange=function(){
 					if(xhr.readyState==4 && xhr.status==200){
 						var result=xhr.responseText
+						if(result==1){
+							alert("报名成功")
+						}
 					}
 				}
 				xhr.open("post","/user/v1/user_join",true)
-				var formdata=
+				var formdata="class_name="+$class_name+"&contact="+$contact+"&phone="+$phone+"&grade="+$grade;
 				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 				xhr.send(formdata)
 			}
 		</script>
 	</head>
 	<body>
-		<input type="text" id="class_name"><br>
-		<input type="text" id="contact"><br>
-		<input type="text" id="phone"><br>
+		<input type="text" id="class_name" onblur="b1()" placeholder="请输入课程名称"><span id="sp1"></span><br>
+		<input type="text" id="contact" onblur="b2()" placeholder="请输入联系人"><span id="sp2"></span><br>
+		<input type="text" id="phone" onblur="b3()" placeholder="请输入联系方式"><span id="sp3"></span><br>
 		<select id="grade">
-			<option id="op1">初一</option>
-			<option id="op2">初二</option>
-			<option id="op3">初三</option>
-			<option id="op4">高一</option>
-			<option id="op5">高二</option>
+			<option>初一</option>
+			<option>初二</option>
+			<option>初三</option>
+			<option>高一</option>
+			<option>高二</option>
 		</select><br>
-		<button onclick="join()"></button>
+		<button onclick="join()">确认报名</button>
 	</body>
 </html>
