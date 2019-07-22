@@ -71,7 +71,7 @@
 				}
 			}
 			xhr.open("post","/user/v1/reg",true)
-			var formdata="uname="+$uname+"&upwd1="+$upwd1+"&upwd2="+$upwd2+"&email="+$email+"&phone="+$phone+"&first_name="+$first_name+"&sex="+$sex;
+			var formdata="uname="+$uname+"&upwd1="+$upwd1+"&email="+$email+"&phone="+$phone+"&first_name="+$first_name+"&sex="+$sex;
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
 			xhr.send(formdata)
 		}

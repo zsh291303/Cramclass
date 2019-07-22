@@ -32,18 +32,43 @@
 				xhr.open("get","/course/v1/detail/"+$cid,true)
 				xhr.send(null);
 			}
+			function upd(){
+				var $cid=cid.value
+				var $course_time=course_time.value
+				var $course_long=course_long.value
+				var $course_teacher=course_teacher.value
+				var $course_information=course_information.value
+				var $course_price=course_price.value
+				var $course_test=course_test.value
+				var xhr=new XMLHttpRequest()
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result=xhr.responseText;
+						if(result=="1"){
+							alert("修改成功")
+						}else{
+							alert("修改失败")
+						}
+					}
+				}
+				xhr.open("put","/course/v1/update",true)
+				var formdate="course_time="+$course_time+"&course_long="+$course_long+"&course_teacher="+$course_teacher+"&course_information="+$course_information+"&course_price="+$course_price+"&course_test="+$course_test+"&cid="+$cid
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+				xhr.send(formdate)
+			}
 		</script>
 	</head>
 	<body onload="detail()">
 		<input type="text" id="cid" readonly><br>
-		<input type="text" id="course_name"><br>
-		<input type="text" id="course_grade"><br>
+		<input type="text" id="course_name" readonly><br>
+		<input type="text" id="course_grade" readonly><br>
 		<input type="text" id="course_time"><br>
 		<input type="text" id="course_long"><br>
 		<input type="text" id="course_teacher"><br>
 		<input type="text" id="course_information"><br>
 		<input type="text" id="course_price"><br>
 		<input type="text" id="course_test"><br>
-		<input type="text" id="cramc_gid"><br>
+		<input type="text" id="cramc_gid" readonly><br>
+		<button onclick="upd()">修改</button>
 	</body>
 </html>

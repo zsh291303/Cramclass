@@ -43,8 +43,8 @@
 						html+=`
 								<td>${arr[i].course_test}</td>
 								<td>
-									<a href="coursedetail.html?cid=${arr[i].cid}">修改</a>
-									<a href="">删除</a>
+									<a href="coursedetail.html?cid=${arr[i].cid}" target="blank">修改</a>
+									<a href="javascript:del(${arr[i].cid})">删除</a>
 								</td>
 							</tr>
 						`
@@ -56,9 +56,14 @@
 			xhr.open("get","/course/v1/list",true);
 			xhr.send(null);
 		}
+		function del(cid){
+			var xhr=new XMLHttpRequest();
+			
+		}
 	</script>
 </head>
 	<body onload="list()">
+		
 		<div id="d1"></div>
 	</body>
 </html>

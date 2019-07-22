@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        function add(){
+            var $tname=tname.value
+            var $tclass=tclass.value
+            var $synopsis=synopsis.value
+            var $tidea=tidea.value
+            var $tsaying=tsaying.value
+            var xhr=new XMLHttpRequest()
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText
+                    if(result=="1"){
+                        alert("添加成功")
+                    }else if(result=="0"){
+                        alert("添加失败")
+                    }
+                }
+            }
+            xhr.open("post","/teacher/v1/teacher_add",true)
+            var formdate="tname="+$tname+"&tclass="+$tclass+"&synopsis="+$synopsis+"&tidea="+$tidea+"&tsaying="+$tsaying
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+            xhr.send(formdate)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="tname" placeholder="请输入教师名字"/><br/>
+    <input type="text" id="tclass" placeholder="请输入教学课程"/><br/>
+    <input type="text" id="synopsis" placeholder="请输入生平简介"/><br/>
+    <input type="text" id="tidea" placeholder="请输入教学理念"/><br/>
+    <input type="text" id="tsaying" placeholder="请输入座右铭"/><br/>
+    <button onclick="add()">添加</button>
+</body>
+</html>
