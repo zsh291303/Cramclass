@@ -14,10 +14,9 @@
             xhr.onreadystatechange=function(){
                 if(xhr.readyState==4 && xhr.status==200){
                     var result=xhr.responseText
+                    console.log(result)
                     if(result=="1"){
                         alert("添加成功")
-                    }else if(result=="0"){
-                        alert("添加失败")
                     }
                 }
             }

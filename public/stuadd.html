@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        function add(){
+            var xhr=new XMLHttpRequest()
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText
+                    if(result=="1"){
+                        alert("添加成功")
+                    }else{
+                        alert("添加失败")
+                    }
+                }
+            }
+            xhr.open("post","/stu/v1/stu_add",true)
+            var formdata=
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")
+            xhr.send(formdata)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="sname" placeholder="请输入学生名字"/><br/>
+    <input type="text" id="grade" placeholder="请输入学生成绩"/><br/>
+    <input type="text" id="ssaying" placeholder="请输入座右铭"/><br/>
+    <button onclick="add()">添加</button>
+</body>
+</html>

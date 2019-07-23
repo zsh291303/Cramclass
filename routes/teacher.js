@@ -7,11 +7,7 @@ router.post('/v1/teacher_add',function(req,res){
 	var sql="insert into cramc_teacher set ?"
 	pool.query(sql,[obj],(err,result)=>{
 		if(err)  throw  err
-		if(result.length>0){
 			res.send("1");
-		}else{
-			res.send("0")
-		}
 	});
 });
 //查询老师

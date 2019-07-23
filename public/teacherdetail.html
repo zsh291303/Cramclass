@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        function detail(){
+            var $tname=tname.value
+            var xhr=new XMLHttpRequest()
+            console.log(xhr)
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText
+                    var arr=JSON.parse(result)[0]
+                    tclass.value=arr.tclass
+                    synopsis.value=arr.synopsis
+                    tidea.value=arr.tidea
+                    tsaying.value=arr.tsaying
+                }
+            }
+            xhr.open("get","teacher/v1/teacher_detail/"+$tname,true)
+            xhr.send(null)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="tname"/><br/>
+    <input type="text" id="tclass"/><br/>
+    <input type="text" id="synopsis"/><br/>
+    <input type="text" id="tidea"/><br/>
+    <input type="text" id="tsaying"/><br/>
+    <button onclick="detail()">查询</button>
+</body>
+</html>

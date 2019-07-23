@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8de967f-2901-4b8c-9fb3-dce4a88b2e89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/29130.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/teacheradd.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/coursedetail.html" afterPath="$PROJECT_DIR$/public/coursedetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/courselistH.html" afterPath="$PROJECT_DIR$/public/courselistH.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stuadd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/studetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/teacherdetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/stu.js" afterPath="$PROJECT_DIR$/routes/stu.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/teacher.js" afterPath="$PROJECT_DIR$/routes/teacher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/userreg.html" afterPath="$PROJECT_DIR$/public/userreg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/标准.html" afterPath="$PROJECT_DIR$/public/标准.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/teacheradd.html" afterPath="$PROJECT_DIR$/public/teacheradd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cramclass.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +29,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="teacheradd.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacheradd.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/teacheradd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4483188">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state vertical-scroll-proportion="-14.615385">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacherdetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/teacherdetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.3076923">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stuadd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stuadd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.846153">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studetail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/studetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2988792">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -43,7 +72,7 @@
       <file leaf-file-name="coursedetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/coursedetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.051282">
+            <state vertical-scroll-proportion="-37.51282">
               <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
               <folding />
             </state>
@@ -70,7 +99,10 @@
         <option value="$PROJECT_DIR$/1.html" />
         <option value="$PROJECT_DIR$/public/coursedetail.html" />
         <option value="$PROJECT_DIR$/public/标准.html" />
+        <option value="$PROJECT_DIR$/public/teacherdetail.html" />
         <option value="$PROJECT_DIR$/public/teacheradd.html" />
+        <option value="$PROJECT_DIR$/public/stuadd.html" />
+        <option value="$PROJECT_DIR$/public/studetail.html" />
       </list>
     </option>
   </component>
@@ -83,7 +115,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="303" />
-    <option name="y" value="9" />
+    <option name="y" value="66" />
     <option name="width" value="1517" />
     <option name="height" value="998" />
   </component>
@@ -126,6 +158,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,8 +194,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,7 +259,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="303" y="9" width="1517" height="998" extended-state="0" />
+    <frame x="303" y="66" width="1517" height="998" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23015344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -284,6 +316,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/teacheradd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/coursedetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WEB.CSS/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -309,7 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.23077">
           <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -317,7 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.9813664">
           <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,22 +371,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33540374">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/userdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3362391">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/coursedetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.051282">
+        <state vertical-scroll-proportion="-37.51282">
           <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/userreg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.373599">
+          <caret line="63" column="41" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stuadd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.846153">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/teacheradd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4483188">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state vertical-scroll-proportion="-14.615385">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/teacherdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3076923">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/studetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2988792">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
       </provider>

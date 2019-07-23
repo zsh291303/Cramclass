@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+        function detail(){
+            var $sname=sname.value
+            var xhr=new XMLHttpRequest()
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText
+                    var arr=JSON.parse(result)[0]
+                    grade.value=arr.grade
+                    ssaying.value=arr.ssaying
+                }
+            }
+            xhr.open("get","/stu/v1/stu_detail/"+$sname,true)
+            xhr.send()
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="sname"/><br/>
+    <input type="text" id="grade"/><br/>
+    <input type="text" id="ssaying"/><br/>
+    <button onclick="detail()">查询</button>
+</body>
+</html>
