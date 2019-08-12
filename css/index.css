@@ -1,0 +1,32 @@
+.font-size-icon{
+  font-size: 25px;
+}
+
+.bg-col{
+  background-color: red;
+}
+
+.border-bot{
+  border-bottom: 6px solid red;
+}
+
+.position-rel{
+  position: relative;
+}
+
+.position-so{
+  position: absolute;
+}
+
+.h1{
+  width: 100px;
+  height: 125px
+}
+
+.img-rouder{
+  border-radius: 0.25rem;
+}
+
+.border-bot1{
+  border-bottom: 4px solid #cccccc;
+}
