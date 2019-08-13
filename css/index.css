@@ -30,3 +30,14 @@
 .border-bot1{
   border-bottom: 4px solid #cccccc;
 }
+
+.caroul-size{
+  width:5%;
+  height: 20%;
+  margin-top:40%;
+  background-color: rgba(cc,cc,cc,.5)
+}
+
+.w-30{
+  width: 30%;
+}
