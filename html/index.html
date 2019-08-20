@@ -15,15 +15,9 @@
 </head>
 <body>
   <div class="container px-0">
-    <div class="row border-bot mx-0">
-      <div class="col-2">
-        <div class="text-center bg-col">
-          <i class="iconfont icon-liebiao font-size-icon"></i>
-          <a href="">课程导航</a>
-        </div>
-      </div>
-      <div class="col-10">
-        <ul class="list-unstyled d_flex justify-content-around m-0">
+    <!-- 表头 header-->
+    <div id="header" class="index-header">
+        <ul class="d_flex justify-content-around m-0">
           <li>
             <a href="">初中</a>
           </li>
@@ -49,116 +43,422 @@
             <a href="">暑期线上精品课</a>
           </li>
         </ul>
-      </div>
     </div>
-    <div class="position-rel">
-      <div id="carouselId" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselId" data-slide-to="1"></li>
-          <li data-target="#carouselId" data-slide-to="2"></li>
-          <li data-target="#carouselId" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <a href="">
-              <img src="../img/index/caroul/car-1.jpg" alt="First slide" class="w-100">
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="">
-              <img src="../img/index/caroul/car-2.jpg" alt="First slide" class="w-100">
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="">
-              <img src="../img/index/caroul/car-3.jpg" alt="First slide" class="w-100">
-            </a>
-          </div>
-          <div class="carousel-item">
-            <a href="">
-              <img src="../img/index/caroul/car-4.jpg" alt="First slide" class="w-100">
-            </a>
-         </div>
+    <!-- 轮播图+菜单 -->
+    <div class="row position-rel mx-0">
+      <!-- 小导航  naviga-->
+      <div class="col-2 px-0 naviga-bg-c">
+        <div class="">
+            <ul class="naviga-f-size m-0">
+                <li><hr></li>
+                <li>
+                  <p class="my-0"> 
+                    <img src="" alt="">
+                    <a href="" class="">初中</a>
+                  </p>
+                </li>
+                <li><hr></li>
+                <li>
+                  <p class="my-0"> 
+                    <img src="" alt="">
+                    <a href="" class="">初中</a>
+                  </p>
+                </li>
+                <li><hr></li>
+                <li>
+                  <p class="my-0"> 
+                    <img src="" alt="">
+                    <a href="" class="">初中</a>
+                  </p>
+                </li>
+                <li><hr></li>
+                <li>
+                  <p class="my-0"> 
+                    <img src="" alt="">
+                    <a href="" class="">初中</a>
+                  </p>
+                </li>
+                <li><hr></li>
+              </ul>
         </div>
-        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true" class="caroul-size"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true" class="caroul-size"></span>
-          <span class="sr-only">Next</span>
-        </a>
+      </div>
+      <!-- 小导航扩展栏 -->
+      <div class="position-so naviga-po-so naviga-big-index naviga-big-size naviga-big-bg-c d-none">
+          <div class="">
+            <ul class="p-0 m-0">
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初一</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初二</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">物理</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初三</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">物理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">化学</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="position-so naviga-po-so naviga-big-index naviga-big-size naviga-big-bg-c d-none">
+          <div class="">
+            <ul class="p-0 m-0">
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初一</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初二</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">物理</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="naviga-big-pad">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="" class="naviga-f-size">初三</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">数学</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">英语</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">地理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">物理</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="">化学</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <!-- 轮播图 caroul-->
+      <div class="col-10 px-0 caroul-size ">
+        <div class="position-rel position-rel border-t">
+          <div id="carouselId" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselId" data-slide-to="1"></li>
+              <li data-target="#carouselId" data-slide-to="2"></li>
+              <li data-target="#carouselId" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <a href="">
+                  <img src="../img/index/caroul/car-1.jpg" alt="First slide" class="w-100">
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../img/index/caroul/car-2.jpg" alt="First slide" class="w-100">
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../img/index/caroul/car-3.jpg" alt="First slide" class="w-100">
+                </a>
+              </div>
+              <div class="carousel-item">
+                <a href="">
+                  <img src="../img/index/caroul/car-4.jpg" alt="First slide" class="w-100">
+                </a>
+              </div>
+              <div>
+                <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" class="caroul-size"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true" class="caroul-size"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row mx-0 mt-3">
-      <div class="col-9 px-0 pr-3">
-        <h2>简介</h2>
-        <div class="d_flex">
-          <img src="../img/index/body/studentpic1.jpg" alt="" class="img-rouder">
-          <div class="ml-2">
-             <h3>机构简介</h3>
-            <span class="h4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12的品牌机构及个体家教资源为入手点向其它艺术、生活、体育、出国培训等教育类领域扩张，供教师或机构与家长双方进行匹配和对接，让所有的学生都能寻找到最合适自己的老师，让教与学变得简单、直接!
-            </span>
+    <!-- 网页主题 -->
+    <div id="body" class="row mx-0">
+      <!-- body左 -->
+      <div id="body-l" class="col-9 px-0">
+        <div>
+          <h4>
+            <img src="" alt="">
+            <span>面对面</span>
+          </h4>
+          <hr>
+          <div class="d_flex d_flex-justify-aro">
+            <div>
+              <div>
+                <img src="../img/index/body/class/wuli.jpg" alt="">
+              </div>
+              <p>
+                <a href="">
+                  初一数学
+                </a>
+              </p>
+              <p class="text-align-r">x人报名</p>
+            </div>
+            <div>
+              <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+              </div>
+              <p>
+                <a href="">
+                  初二英语
+                </a>
+              </p>
+              <p class="text-align-r">x人报名</p>
+            </div>
+            <div>
+              <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+              </div>
+              <p>
+                <a href="">
+                  高一物理
+                </a>
+              </p>
+              <p>x人报名</p>
+            </div>
           </div>
         </div>
         <div>
-          <h3>精品课程</h3>
-          <div class="d_flex">
-            <div class="w-30 mr-2">
-              <a href="">
-                <img src="../img/index/body/class/english-1.jpg" alt="" class="w-100 img-rouder">
-                <h5>高一英语</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
+            <h4>
+              <img src="" alt="">
+              <span>面对面</span>
+            </h4>
+            <hr>
+            <div class="d_flex d_flex-justify-aro">
+              <div>
+                <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    初一数学
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
+              <div>
+                <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    初二英语
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
+              <div>
+                <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    高一物理
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
             </div>
-            <div class="w-30 mr-2">
-              <a href="">
-                <img src="../img/index/body/class/math-2.jpg" alt="" class="w-100 img-rouder">
-                <h5>初三数学</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
+        </div>
+        <div>
+            <h4>
+              <img src="" alt="">
+              <span>面对面</span>
+            </h4>
+            <hr>
+            <div class="d_flex d_flex-justify-aro">
+              <div>
+                <div>
+                  <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    初一数学
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
+              <div>
+                <div>
+                    <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    初二英语
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
+              <div>
+                <div>
+                    <img src="../img/index/body/class/wuli.jpg" alt="">
+                </div>
+                <p>
+                  <a href="">
+                    高一物理
+                  </a>
+                </p>
+                <p>x人报名</p>
+              </div>
             </div>
-            <div class="w-30">
-              <a href="">
-                <img src="../img/index/body/class/gaozhongmath.jpg" alt="" class="w-100 img-rouder">
-                <h5>高一数学</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
-            </div>
-          </div>
-          <div class="d_flex">
-            <div class="w-30 mr-2">
-              <a href="">
-                <img src="../img/index/body/class/huaxue-1.jpg" alt="" class="w-100 img-rouder">
-                <h5>高二化学</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
-            </div>
-            <div class="w-30 mr-2">
-              <a href="">
-                <img src="../img/index/body/class/huaxue-2.jpg" alt="" class="w-100 img-rouder">
-                <h5>初二化学</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
-            </div>
-            <div class="w-30">
-              <a href="">
-                <img src="../img/index/body/class/wuli.jpg" alt="" class="w-100 img-rouder">
-                <h5>初一物理</h5>
-                <p>优胜教育致力于为广大师生提供一个优质的教育020服务功能平台，通过整合K-12</p>
-              </a>
-            </div>
-          </div>
+        </div>
+        <div>
+              <h4>
+                <img src="" alt="">
+                <span>面对面</span>
+              </h4>
+              <hr>
+              <div class="d_flex d_flex-justify-aro">
+                <div>
+                  <div>
+                    <img src="../img/index/body/class/wuli.jpg" alt="">
+                  </div>
+                  <p>
+                    <a href="">
+                      初一数学
+                    </a>
+                  </p>
+                  <p>x人报名</p>
+                </div>
+                <div>
+                  <div>
+                      <img src="../img/index/body/class/wuli.jpg" alt="">
+                  </div>
+                  <p>
+                    <a href="">
+                      初二英语
+                    </a>
+                  </p>
+                  <p>x人报名</p>
+                </div>
+                <div>
+                  <div>
+                      <img src="../img/index/body/class/wuli.jpg" alt="">
+                  </div>
+                  <p>
+                    <a href="">
+                      高一物理
+                    </a>
+                  </p>
+                  <p>x人报名</p>
+                </div>
+              </div>
         </div>
       </div>
-      <div class="col-3 px-0">
-        <a href="">
-          <img src="../img/index/body/redian1.jpg" alt="" class="img-rouder">
-        </a>
-        <a href="">
-          <img src="../img/index/body/zhuanti.png" alt="" class="img-rouder mt-2">
-        </a> 
+      <!-- body右 -->
+      <div id="body-r" class="col-3 px-0">
+        <div>
+          <a href="">
+            <img src="../img/index/body/redian1.jpg" alt="" class="">
+          </a>
+          <a href="">
+            <img src="../img/index/body/zhuanti.png" alt="">
+          </a>
+        </div>
+        <div>
+          <p class="my-1 h5">精品课程</p>
+          <ul>
+            <li>
+              <p>高一英语</p>
+              <a href="">
+                <img src="../img/index/body/class/english-1.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <p>高二化学</p>
+              <a href="">
+                <img src="../img/index/body/class/huaxue-2.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>更多详情</span>
+          <img src="" alt="">
+        </div>
       </div>
     </div>
   </div>

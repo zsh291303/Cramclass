@@ -1,0 +1,71 @@
+.font-size-icon{
+  font-size: 25px;
+}
+
+.bg-col{
+  background-color: red;
+}
+
+.border-t{
+  border-top: 4px solid red;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+  display: inline-block;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  color: #6c757d;
+  content: "|"; 
+}
+
+.position-rel{
+  position: relative;
+}
+
+.position-so{
+  position: absolute;
+}
+
+.img-rouder{
+  border-radius: 0.25rem;
+}
+
+.border-bot1{
+  border-bottom: 4px solid #cccccc;
+}
+
+.caroul-size{
+  width:5%;
+  height: 20%;
+  margin-top:40%;
+  background-color: rgb(75, 75, 75,);
+  border-radius: 5px
+}
+
+.w-30{
+  width: 30%;
+}
+
+.index{
+  z-index: 100;
+}
+
+.daohang{
+  top: 0;
+  left: 220px;
+  width: 155px;
+  height: 100%;
+  background-color: rgba(236, 236, 236, 0.75) !important;
+}
+
+.daohang-1{
+  background-color: transparent;
+}
+
+.daogang-2-p{
+  padding: 0.3rem; 
+}
+
+.daohang-font-size{
+  font-size:15px;
+}
