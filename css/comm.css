@@ -10,6 +10,10 @@ body{
   display: flex;
 }
 
+.text-cen{
+  text-align: center;
+}
+
 .d_flex-justify-aro{
   justify-content: space-around;
 }
@@ -24,4 +28,20 @@ body{
 
 ul{
   list-style: none;
+}
+
+.position-rel{
+  position: relative;
+}
+
+.position-so{
+  position: absolute;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+.margin-auto{
+  margin: 0 auto;
 }

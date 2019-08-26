@@ -1,0 +1,74 @@
+#login ul{
+  margin: 0;
+}
+
+#login hr{
+  margin: 0.7rem 0;
+}
+
+#login .vsbl-h{
+  visibility: hidden;
+}
+
+#login .bg-img{
+  background-image: url(../img/login/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+#login .big-d-size{
+  width: 100%;
+  height: 560px;
+}
+
+#login .sm-d-size{
+  width: 280px;
+  height: 350px;
+  background-color: rgba(0,0,0,.4);
+  color: #FFFFFF
+}
+
+#login .sm-d-locat{
+  top: 20%;
+  right: 10%;
+}
+
+#login .ipt-uname , .ipt-upwd{
+  border-radius: 3px;
+  width: 80%;
+  margin: 0 10%;
+  padding: 0.15rem 0.5rem;
+  outline: none;
+  border: 0;
+}
+
+#login .ipt-uname-bgi{
+  background-image: url(../img/login/yhm.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+#login .ipt-upwd-bgi{
+  background-image: url(../img/login/mm.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+#login li button{
+  width: 80%;
+  height: 40px;
+  margin: 15px 10%;
+  background-color:#27b0f6;
+  outline: none;
+  border-radius: 3px;
+  border:0;
+  color: #fff
+}
+
+#login li button:hover{
+  background-color: #2A75FE;
+}
+
+#login li button:active{
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}

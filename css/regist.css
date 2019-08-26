@@ -1,0 +1,77 @@
+#regist ul{
+  margin: 0;
+}
+
+#regist hr{
+  margin: 0.7rem 0;
+}
+
+
+#regist .bg-img{
+  background-image: url(../img/regist/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#regist .big-d-size{
+  width: 100%;
+  height: 560px;
+}
+
+#regist .sm-d-size{
+  width: 400px;
+  height: 480px;
+  background-color: rgba(0,0,0,.4);
+  color: #FFFFFF
+}
+
+#regist .sm-d-locat{
+  top: 10%;
+  right: 8%;
+}
+
+#regist .input{
+  border-radius: 3px;
+  width: 240px;
+  margin: 0 0 0 7%;
+  padding: 0.15rem 0.5rem;
+  outline: none;
+  border: 0;
+}
+
+#regist .span-grey{
+  background-color: #999999;
+}
+
+#regist .span-red{
+  background-color: red
+}
+
+#regist span{
+  color: #fff;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+#regist .mz-4{
+  margin: 5% 0 0 0;
+}
+
+#regist li button{
+  width: 80%;
+  height: 40px;
+  margin: 15px 10%;
+  background-color:#27b0f6;
+  outline: none;
+  border-radius: 3px;
+  border:0;
+  color: #fff
+}
+
+#regist li button:hover{
+  background-color: #2A75FE;
+}
+
+#regist li button:active{
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
