@@ -61,7 +61,7 @@ ul.naviga-f-size p{
 }
 
 .naviga-big-bg-c{
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .naviga-big-pad{
@@ -71,7 +71,7 @@ ul.naviga-f-size p{
 ul.breadcrumb{
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .caroul-size{
@@ -109,7 +109,7 @@ ul.breadcrumb{
 
 #body-l div.d_flex>div a{
   display: block;
-  margin: 1rem 0;
+  margin: 0.65rem 0;
   font-size: 20px;
 }
 

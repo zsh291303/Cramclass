@@ -1,0 +1,76 @@
+#high1 .index-header{
+  background-color: #4F8DFE;
+  border-radius: 3px;
+}
+
+#high1 .index-header ul{
+  padding: 10px;
+}
+
+#high1 .index-header a{
+  color: #fff;
+  font-size: 20px;
+}
+
+#high1 .naviga-bg-c{
+  background-color: #292D32;
+  border-radius: 3px 0 0 3px;
+}
+
+#high1 .naviga-bg-c a{
+    color:#99997E;
+}
+
+#high1 .naviga-bg-c hr{
+  margin: 0
+}
+
+#high1 .naviga-bg-c p{
+  padding: 16px  0px;
+}
+
+#high1 .naviga-bg-c p:hover{
+  background-color: #fff;
+}
+
+#high1 .naviga-f-size{
+  font-size: 18px
+}
+
+#high1 ul.naviga-f-size p{
+  text-align: center;
+  line-height: 100%;
+}
+
+#high1 .naviga-po-so{
+  top:0;
+  left:16%;
+}
+
+#high1 .naviga-big-index{
+  z-index: 100;
+}
+
+#high1 .naviga-big-size{
+  height: 203.4px;
+  width: 500px
+}
+
+#high1 .naviga-big-bg-c{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#high1 .naviga-big-pad{
+  padding: 10px
+}
+
+#high1 ul.breadcrumb{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#high1 .caroul-size{
+  width: 100%;
+  height: 203.4px;
+}
