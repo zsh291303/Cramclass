@@ -45,3 +45,11 @@ a:link{
 .margin-auto{
   margin: 0 auto;
 }
+
+.w-10{
+  width: 10%;
+}
+
+.w-90{
+  width: 90%;
+}
